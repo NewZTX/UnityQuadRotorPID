@@ -6,7 +6,7 @@ public class QRotor : MonoBehaviour
 {
     // 穿越机3D电机,扇叶反转也能产生和正转同样大小并反向的升力.
 
-    public float throttle;// 转速
+    public float throttle;// 转速 或视为输入电压
     [HideInInspector] public float Kf;//升力比例系数
     [HideInInspector] public float Km;//反扭矩比例系数
 
@@ -19,7 +19,7 @@ public class QRotor : MonoBehaviour
 
     [HideInInspector] public float upForce;
 
-    [HideInInspector] public float counterTorque;// 反扭距
+    [HideInInspector] public float counterTorque;
 
     void Start()
     {
@@ -39,14 +39,17 @@ public class QRotor : MonoBehaviour
             direction = -1.0f;
         }
 
+        // 叶片转动
         propeller.transform.RotateAround(
             centerAxis.transform.position, centerAxis.transform.up, direction * 50f * throttle * Time.deltaTime);
 
+        // 产生升力
         // upForce = Kf * throttle * throttle; // 会导致推力恒为正
         float sign = Mathf.Sign(throttle);
         upForce = sign * Kf * throttle * throttle;
         stressedObjectForce.GetComponent<Rigidbody>().AddForce(stressedObjectForce.transform.up * upForce);
 
+        // 产生反扭矩
         counterTorque = sign * Km * throttle * throttle;
         stressedObjectTorque.GetComponent<Rigidbody>().AddRelativeTorque(counterTorque * direction * stressedObjectTorque.transform.up);
     }

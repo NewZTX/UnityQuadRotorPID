@@ -6030,7 +6030,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
       propertyPath: Kd
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
       propertyPath: Ki
@@ -6038,19 +6038,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
       propertyPath: Kp
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
       propertyPath: Kd1
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
       propertyPath: Ki1
-      value: 0.005
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
       propertyPath: Kp1
-      value: 6
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
+      propertyPath: innerKd
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
+      propertyPath: innerKi
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
+      propertyPath: innerKp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
+      propertyPath: PIDupLimit
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
+      propertyPath: PIDupLimit1
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
+      propertyPath: PIDdownLimit
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
+      propertyPath: PIDdownLimit1
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 4634881374635165370, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6090,6 +6118,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4634881374635165370, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650391245492463677, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650391245492463677, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
+      propertyPath: m_ImplicitCom
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650391245492463677, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650391245492463677, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
+      propertyPath: m_ImplicitTensor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4650391245492463677, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
+      propertyPath: m_CollisionDetection
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6955115813121851318, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}

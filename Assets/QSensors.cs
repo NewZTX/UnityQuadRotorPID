@@ -32,8 +32,10 @@ public class QSensors : MonoBehaviour
     }
 }
 
+// TODO: 需要大改，全部使用基于世界空间坐标的速度和加速度计算，以及基于LocalRotation计算的角速度
+
 // IMU
-// 陀螺仪
+// 陀螺仪 三轴角速度计
 public class Gyroscope
 {
     public Rigidbody measureBody;
@@ -52,7 +54,7 @@ public class Gyroscope
     }
 }
 
-// 加速度计
+// 三轴加速度计
 public class Accelerometer
 {
     public Rigidbody measureBody;
