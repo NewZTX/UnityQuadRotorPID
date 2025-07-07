@@ -429,7 +429,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -6038,7 +6038,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
       propertyPath: Kp
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
       propertyPath: Kd1
@@ -6050,7 +6050,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
       propertyPath: Kp1
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
       propertyPath: innerKd
