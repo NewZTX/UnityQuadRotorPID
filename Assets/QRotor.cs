@@ -8,7 +8,7 @@ public class QRotor : MonoBehaviour
 
     public float throttle;// 转速 或视为输入电压
     [HideInInspector] public float Kf;//升力比例系数
-    [HideInInspector] public float Km;//反扭矩比例系数
+    [HideInInspector] public float Km;//反扭矩比例系数 机体越小，该比例系数需要设置得越大
 
     [Header("螺旋桨")] public GameObject propeller;
     [Header("螺旋桨旋转轴")] public GameObject centerAxis;
@@ -17,14 +17,14 @@ public class QRotor : MonoBehaviour
 
     public bool clockwise = true;
 
-    [HideInInspector] public float upForce;
+    public float upForce;
 
-    [HideInInspector] public float counterTorque;
+    public float counterTorque;
 
     void Start()
     {
         Kf = 0.01f;
-        Km = 0.005f;
+        Km = 0.01f;
     }
 
     void FixedUpdate()
@@ -41,7 +41,7 @@ public class QRotor : MonoBehaviour
 
         // 叶片转动
         propeller.transform.RotateAround(
-            centerAxis.transform.position, centerAxis.transform.up, direction * 50f * throttle * Time.deltaTime);
+            centerAxis.transform.position, centerAxis.transform.up, 10.0f*direction  * throttle * Time.deltaTime);
 
         // 产生升力
         // upForce = Kf * throttle * throttle; // 会导致推力恒为正
@@ -50,7 +50,13 @@ public class QRotor : MonoBehaviour
         stressedObjectForce.GetComponent<Rigidbody>().AddForce(stressedObjectForce.transform.up * upForce);
 
         // 产生反扭矩
-        counterTorque = sign * Km * throttle * throttle;
-        stressedObjectTorque.GetComponent<Rigidbody>().AddRelativeTorque(counterTorque * direction * stressedObjectTorque.transform.up);
+        counterTorque = -sign * Km * throttle * throttle;
+        // 加负号以实现 反 扭矩
+        stressedObjectTorque.GetComponent<Rigidbody>().AddTorque(counterTorque * stressedObjectTorque.transform.up);
+    }
+    public void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, transform.position + 0.1f * upForce * transform.up);
     }
 }
