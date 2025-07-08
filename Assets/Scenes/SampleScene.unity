@@ -12561,15 +12561,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
       propertyPath: Kd
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
       propertyPath: Ki
-      value: 0.002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
       propertyPath: Kp
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
       propertyPath: setHeight
@@ -12577,27 +12577,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
       propertyPath: yawPIDs.Array.data[3]
-      value: 0
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
       propertyPath: yawPIDs.Array.data[4]
-      value: 20
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
       propertyPath: attitudePIDs.Array.data[3]
-      value: 0
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
       propertyPath: attitudePIDs.Array.data[4]
-      value: 20
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
       propertyPath: throttlePIDs.Array.data[3]
-      value: 0
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 3524662360632309329, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
       propertyPath: throttlePIDs.Array.data[4]
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4584603455628381365, guid: 449afdb4d45b54d4984839f84caa4d4b, type: 3}
       propertyPath: m_LocalScale.x
